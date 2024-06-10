@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="books__list">
+    <ul class="books-list">
       <book-item
         v-for="(book, index) in books"
         :key="index"

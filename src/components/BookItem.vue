@@ -1,5 +1,7 @@
 <template>
-  <li class="books-list__item">
+  <li
+    class="books-list__item"
+    :class="{'books-list__item--promotion': book.price < 20}">
     {{ book.title }}, {{ book.price }}
     <!-- <button @click="removeBook(index)">Remove</button> -->
     <button
@@ -52,6 +54,11 @@ export default {
     &:hover {
       box-shadow: 0 20px 40px 0 rgba(76,104,239,.35);
     }
+  }
+
+  &--promotion {
+    font-size: 1.5rem;
+    text-decoration: underline;
   }
 }
 </style>
